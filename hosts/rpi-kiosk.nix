@@ -21,6 +21,8 @@
   services.xserver.displayManager.sddm.wayland = true;
   services.xserver.desktopManager.sway.enable = true;
   programs.sway.enable = true;
+  services.xserver.videoDrivers = ["vc4"];
+  wayland.windowManager.sway.rotation = 90;
   comin.systemd.enable = true;
   services.openssh.enable = true;
   services.openssh.settings = {
