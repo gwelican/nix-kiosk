@@ -1,10 +1,8 @@
-# comin: GitOps pull-based provisioning tool
-# https://github.com/avito-tech/comin
-
 {
   config,
   pkgs,
   lib,
+  specialArgs,
   ...
 }:
 
@@ -39,14 +37,21 @@ in
       default = "/var/lib/comin";
       description = "Working directory for comin repository clone.";
     };
+
+    testBranch = lib.mkOption {
+      type = lib.types.nullOr lib.types.str;
+      default = null;
+      description = "Testing branch to sync from (optional). If set, comin syncs from this branch instead of the main branch.";
+    };
+
+    rollbackVersion = lib.mkOption {
+      type = lib.types.nullOr lib.types.str;
+      default = null;
+      description = "Specific version/commit to rollback to (optional). If set, comin syncs to this specific version instead of the branch head.";
+    };
   };
 
   config = lib.mkIf cfg.enable {
-    # Install comin package if needed (using system comin from nixpkgs)
-    environment.systemPackages = [
-      pkgs.comin
-    ];
-
     # systemd service for comin polling
     systemd.services.comin = {
       description = "comin GitOps configuration sync";
@@ -56,7 +61,11 @@ in
 
       serviceConfig = {
         Type = "oneshot";
-        ExecStart = "${pkgs.comin}/bin/comin sync --polling-interval ${cfg.pollingInterval} --git-url ${cfg.repository} --branch ${cfg.branch} --work-dir ${cfg.workDir}";
+        ExecStart =
+          "${specialArgs.comin}/bin/comin sync --polling-interval ${cfg.pollingInterval} --git-url ${cfg.repository} --branch ${
+            if cfg.testBranch != null then cfg.testBranch else cfg.branch
+          } --work-dir ${cfg.workDir}"
+          + (if cfg.rollbackVersion != null then " --rollback-version ${cfg.rollbackVersion}" else "");
         Restart = "always";
         RestartSec = "5";
         StandardOutput = "journal";
