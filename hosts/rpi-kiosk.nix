@@ -1,5 +1,6 @@
-{
-  # Minimal host configuration
+# Minimal host configuration
+{ config, pkgs, ... }: {
+  sops.age.keyFile = ./secrets/age.key;
   networking.hostName = "rpi-kiosk";
   services.dbus.enable = true;
   fileSystems."/" = {

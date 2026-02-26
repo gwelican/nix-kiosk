@@ -1,0 +1,30 @@
+=== TASK 1 FIX VERIFICATION ===
+
+PROBLEM:
+- flake.nix had RPi5 modules directly in it (caused "hardware.raspberry-pi does not exist" error)
+- flake.nix had Plasma6 desktop environment
+- flake.nix had GDM display manager
+- flake.nix had user.kiosk configuration
+- All these were scope creep - should be in hosts/
+
+FIXES APPLIED:
+1. Removed all RPi5 hardware modules from flake.nix
+2. Removed Plasma6 desktop environment
+3. Removed GDM display manager
+4. Removed user.kiosk configuration
+5. Added host reference to hosts/rpi-kiosk.nix
+6. Kept minimal flake structure with inputs
+7. Changed from nixos-raspberrypi.lib.nixosSystem to nixpkgs.lib.nixosSystem
+
+FILES MODIFIED:
+1. /home/gwelican/nix3/flake.nix
+2. /home/gwelican/nix3/hosts/rpi-kiosk.nix
+
+VERIFICATION:
+✓ nix flake show shows rpi-kiosk configuration
+✓ nix build .#nixosConfigurations.rpi-kiosk.config.system.build.toplevel builds successfully
+✓ No Plasma6, GDM, or user.kiosk in config
+✓ No RPi5 hardware modules in flake.nix
+
+COMMIT MESSAGE:
+fix(scaffolding): remove scope creep from flake.nix

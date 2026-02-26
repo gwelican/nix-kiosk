@@ -3,9 +3,9 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    sops-nix.url = "github:mic92/sops-nix";
     nixos-raspberrypi.url = "github:nvmd/nixos-raspberrypi/main";
-    agenix.url = "github:ryantm/agenix";
+    comin.url = "github:nlewo/comin";
+    sops-nix.url = "github:mic92/sops-nix";
   };
 
   outputs =
@@ -17,11 +17,13 @@
       ...
     }@inputs:
     {
-      nixosConfigurations.rpi-kiosk = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+      nixosConfigurations.rpi-kiosk = nixos-raspberrypi.lib.nixosSystem {
+        system = "aarch64-linux";
         modules = [
           ./hosts/rpi-kiosk.nix
+          sops-nix.nixosModules.sops
         ];
+        specialArgs = { inherit nixos-raspberrypi; };
       };
 
       nixConfig = {

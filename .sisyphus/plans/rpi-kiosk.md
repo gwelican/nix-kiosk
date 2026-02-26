@@ -241,7 +241,7 @@ Max Concurrent: 7 (Waves 1 & 2)
 > EVERY task MUST have: Recommended Agent Profile + Parallelization info + QA Scenarios.
 > **A task WITHOUT QA Scenarios is INCOMPLETE. No exceptions.**
 
-- [ ] 1. Project scaffolding + flake.nix
+- [x] 1. Project scaffolding + flake.nix
 
   **What to do**:
   - Create project directory structure: `hosts/`, `secrets/`, `pkgs/`, `deploy/`, `prometheus/`

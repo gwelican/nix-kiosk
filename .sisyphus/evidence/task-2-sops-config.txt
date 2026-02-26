@@ -1,0 +1,4 @@
+=== .sops.yaml Configuration ===
+creation_rules:
+  - path: secrets/.+
+    age: age1xkmwtyqgtpsusgtcjcu2atjl8c0qvq0wtfctnq5erpwahpleeawq4e76h8

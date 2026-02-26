@@ -1,6 +1,13 @@
 {
   "active_plan": "/home/gwelican/nix3/.sisyphus/plans/rpi-kiosk.md",
   "started_at": "2026-02-26T03:17:03.279Z",
-  "session_ids": ["ses_369309e8affexvNBiMVariHb11"],
-  "plan_name": "rpi-kiosk"
+  "session_ids": [
+    "ses_369309e8affexvNBiMVariHb11",
+    "ses_3680ba380ffeWE1Q2U8Z1vecsU",
+    "ses_368067356ffeg7p6Vct9Ba1NTO",
+    "ses_368002073ffeEci4hou0CgbSZU"
+  ],
+  "plan_name": "rpi-kiosk",
+  "completed_tasks": [1],
+  "next_task": 2
 }

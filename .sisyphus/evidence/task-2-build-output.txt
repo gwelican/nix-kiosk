@@ -1,0 +1,457 @@
+warning: Git tree '/home/gwelican/nix3' is dirty
+warning: ignoring untrusted substituter 'https://nixos-raspberrypi.cachix.org', you are not a trusted user.
+Run `man nix.conf` for more information on the `substituters` configuration option.
+warning: ignoring the client-specified setting 'trusted-public-keys', because it is a restricted setting and you are not a trusted user
+warning: ignoring untrusted substituter 'https://nixos-raspberrypi.cachix.org', you are not a trusted user.
+Run `man nix.conf` for more information on the `substituters` configuration option.
+warning: ignoring the client-specified setting 'trusted-public-keys', because it is a restricted setting and you are not a trusted user
+warning: updating lock file "/home/gwelican/nix3/flake.lock":
+• Added input 'comin':
+    'github:nlewo/comin/d5bbf20a7e3afe492ab5b05e0250635f4e51da44?narHash=sha256-F59AGLXs/kLBYK8kfvev5OPoLmpb6G9XF/1vk27Gzu4%3D' (2026-02-25)
+• Added input 'comin/flake-compat':
+    'github:NixOS/flake-compat/65f23138d8d09a92e30f1e5c87611b23ef451bf3?narHash=sha256-4VBOP18BFeiPkyhy9o4ssBNQEvfvv1kXkasAYd0%2BrrA%3D' (2025-12-07)
+• Added input 'comin/nixpkgs':
+    'github:NixOS/nixpkgs/6a6c0b0e45e89636dc7546bc561cc031e429d068?narHash=sha256-2n2pA3OG4jBcxUJcwLtpwBxDxr6j5tIGzh5YD2WmJQc%3D' (2026-02-23)
+• Added input 'comin/treefmt-nix':
+    'github:numtide/treefmt-nix/337a4fe074be1042a35086f15481d763b8ddc0e7?narHash=sha256-wQ6NJSuFqAEmIg2VMnLdCnUc0b7vslUohqqGGD%2BFyxk%3D' (2026-02-04)
+• Added input 'comin/treefmt-nix/nixpkgs':
+    'github:nixos/nixpkgs/4533d9293756b63904b7238acb84ac8fe4c8c2c4?narHash=sha256-tbS0Ebx2PiA1FRW8mt8oejR0qMXmziJmPaU1d4kYY9g%3D' (2026-02-03)
+• Added input 'nixos-raspberrypi':
+    'github:nvmd/nixos-raspberrypi/6b30596bea9047a7cbb55cb58e6f8a3efa4012e2?narHash=sha256-v4UIlzztrAll/NPjsi0xWa5%2BfWcI9A4p8MLonL9EUeg%3D' (2026-02-23)
+• Added input 'nixos-raspberrypi/argononed':
+    'github:nvmd/argononed/16dbee54d49b66d5654d228d1061246b440ef7cf?narHash=sha256-DPNI0Dpk5aym3Baf5UbEe5GENDrSmmXVdriRSWE%2Brgk%3D' (2024-10-22)
+• Added input 'nixos-raspberrypi/flake-compat':
+    'github:edolstra/flake-compat/5edf11c44bc78a0d334f6334cdaf7d60d732daab?narHash=sha256-vNpUSpF5Nuw8xvDLj2KCwwksIbjua2LZCqhV1LNRDns%3D' (2025-12-29)
+• Added input 'nixos-raspberrypi/nixos-images':
+    'github:nvmd/nixos-images/cbbd6db325775096680b65e2a32fb6187c09bbb4?narHash=sha256-LUOH27unNWbGTvZFitHonraNx0JF/55h30r9WxqrznM%3D' (2025-05-20)
+• Added input 'nixos-raspberrypi/nixos-images/nixos-stable':
+    follows 'nixos-raspberrypi/nixpkgs'
+• Added input 'nixos-raspberrypi/nixos-images/nixos-unstable':
+    follows 'nixos-raspberrypi/nixpkgs'
+• Added input 'nixos-raspberrypi/nixpkgs':
+    'github:nvmd/nixpkgs/2597cb7e564b9004c9d3182afb29b37ae842411a?narHash=sha256-KOb/xJgNRoUDD7y42/lh2a1%2BakUQ7OYuBdwX/CZevFY%3D' (2026-02-23)
+• Added input 'nixpkgs':
+    'github:nixos/nixpkgs/2fc6539b481e1d2569f25f8799236694180c0993?narHash=sha256-0MAd%2B0mun3K/Ns8JATeHT1sX28faLII5hVLq0L3BdZU%3D' (2026-02-23)
+• Added input 'sops-nix':
+    'github:mic92/sops-nix/334daa7c273dd8bf7a0cd370e4e16022b64e55e9?narHash=sha256-/wA0OaH6kZ/pFA%2BnXR/tvg5oupOmEDmMS5us79JT60o%3D' (2026-02-25)
+• Added input 'sops-nix/nixpkgs':
+    'github:NixOS/nixpkgs/d1c15b7d5806069da59e819999d70e1cec0760bf?narHash=sha256-b9uG8yN50DRQ6A7JdZBfzq718ryYrlmGgqkRm9OOwCE%3D' (2026-02-16)
+error:
+       … while calling the 'seq' builtin
+         at «github:nvmd/nixpkgs/2597cb7e564b9004c9d3182afb29b37ae842411a?narHash=sha256-KOb/xJgNRoUDD7y42/lh2a1%2BakUQ7OYuBdwX/CZevFY%3D»/lib/modules.nix:361:18:
+          360|         options = checked options;
+          361|         config = checked (removeAttrs config [ "_module" ]);
+             |                  ^
+          362|         _module = checked (config._module);
+
+       … while evaluating a branch condition
+         at «github:nvmd/nixpkgs/2597cb7e564b9004c9d3182afb29b37ae842411a?narHash=sha256-KOb/xJgNRoUDD7y42/lh2a1%2BakUQ7OYuBdwX/CZevFY%3D»/lib/modules.nix:297:9:
+          296|       checkUnmatched =
+          297|         if config._module.check && config._module.freeformType == null && merged.unmatchedDefns != [ ] then
+             |         ^
+          298|           let
+
+       (stack trace truncated; use '--show-trace' to show the full, detailed trace)
+
+       error: syntax error, unexpected '=', expecting end of file
+       at /home/gwelican/nix3/hosts/rpi-kiosk.nix:3:11:
+            2| #VS|{
+            3|   imports = [
+             |           ^
+            4|     sops-nix.nixosModules.sops
+warning: Git tree '/home/gwelican/nix3' is dirty
+warning: ignoring untrusted substituter 'https://nixos-raspberrypi.cachix.org', you are not a trusted user.
+Run `man nix.conf` for more information on the `substituters` configuration option.
+warning: ignoring the client-specified setting 'trusted-public-keys', because it is a restricted setting and you are not a trusted user
+warning: ignoring untrusted substituter 'https://nixos-raspberrypi.cachix.org', you are not a trusted user.
+Run `man nix.conf` for more information on the `substituters` configuration option.
+warning: ignoring the client-specified setting 'trusted-public-keys', because it is a restricted setting and you are not a trusted user
+warning: updating lock file "/home/gwelican/nix3/flake.lock":
+• Added input 'comin':
+    'github:nlewo/comin/d5bbf20a7e3afe492ab5b05e0250635f4e51da44?narHash=sha256-F59AGLXs/kLBYK8kfvev5OPoLmpb6G9XF/1vk27Gzu4%3D' (2026-02-25)
+• Added input 'comin/flake-compat':
+    'github:NixOS/flake-compat/65f23138d8d09a92e30f1e5c87611b23ef451bf3?narHash=sha256-4VBOP18BFeiPkyhy9o4ssBNQEvfvv1kXkasAYd0%2BrrA%3D' (2025-12-07)
+• Added input 'comin/nixpkgs':
+    'github:NixOS/nixpkgs/6a6c0b0e45e89636dc7546bc561cc031e429d068?narHash=sha256-2n2pA3OG4jBcxUJcwLtpwBxDxr6j5tIGzh5YD2WmJQc%3D' (2026-02-23)
+• Added input 'comin/treefmt-nix':
+    'github:numtide/treefmt-nix/337a4fe074be1042a35086f15481d763b8ddc0e7?narHash=sha256-wQ6NJSuFqAEmIg2VMnLdCnUc0b7vslUohqqGGD%2BFyxk%3D' (2026-02-04)
+• Added input 'comin/treefmt-nix/nixpkgs':
+    'github:nixos/nixpkgs/4533d9293756b63904b7238acb84ac8fe4c8c2c4?narHash=sha256-tbS0Ebx2PiA1FRW8mt8oejR0qMXmziJmPaU1d4kYY9g%3D' (2026-02-03)
+• Added input 'nixos-raspberrypi':
+    'github:nvmd/nixos-raspberrypi/6b30596bea9047a7cbb55cb58e6f8a3efa4012e2?narHash=sha256-v4UIlzztrAll/NPjsi0xWa5%2BfWcI9A4p8MLonL9EUeg%3D' (2026-02-23)
+• Added input 'nixos-raspberrypi/argononed':
+    'github:nvmd/argononed/16dbee54d49b66d5654d228d1061246b440ef7cf?narHash=sha256-DPNI0Dpk5aym3Baf5UbEe5GENDrSmmXVdriRSWE%2Brgk%3D' (2024-10-22)
+• Added input 'nixos-raspberrypi/flake-compat':
+    'github:edolstra/flake-compat/5edf11c44bc78a0d334f6334cdaf7d60d732daab?narHash=sha256-vNpUSpF5Nuw8xvDLj2KCwwksIbjua2LZCqhV1LNRDns%3D' (2025-12-29)
+• Added input 'nixos-raspberrypi/nixos-images':
+    'github:nvmd/nixos-images/cbbd6db325775096680b65e2a32fb6187c09bbb4?narHash=sha256-LUOH27unNWbGTvZFitHonraNx0JF/55h30r9WxqrznM%3D' (2025-05-20)
+• Added input 'nixos-raspberrypi/nixos-images/nixos-stable':
+    follows 'nixos-raspberrypi/nixpkgs'
+• Added input 'nixos-raspberrypi/nixos-images/nixos-unstable':
+    follows 'nixos-raspberrypi/nixpkgs'
+• Added input 'nixos-raspberrypi/nixpkgs':
+    'github:nvmd/nixpkgs/2597cb7e564b9004c9d3182afb29b37ae842411a?narHash=sha256-KOb/xJgNRoUDD7y42/lh2a1%2BakUQ7OYuBdwX/CZevFY%3D' (2026-02-23)
+• Added input 'nixpkgs':
+    'github:nixos/nixpkgs/2fc6539b481e1d2569f25f8799236694180c0993?narHash=sha256-0MAd%2B0mun3K/Ns8JATeHT1sX28faLII5hVLq0L3BdZU%3D' (2026-02-23)
+• Added input 'sops-nix':
+    'github:mic92/sops-nix/334daa7c273dd8bf7a0cd370e4e16022b64e55e9?narHash=sha256-/wA0OaH6kZ/pFA%2BnXR/tvg5oupOmEDmMS5us79JT60o%3D' (2026-02-25)
+• Added input 'sops-nix/nixpkgs':
+    'github:NixOS/nixpkgs/d1c15b7d5806069da59e819999d70e1cec0760bf?narHash=sha256-b9uG8yN50DRQ6A7JdZBfzq718ryYrlmGgqkRm9OOwCE%3D' (2026-02-16)
+error:
+       … while calling the 'seq' builtin
+         at «github:nvmd/nixpkgs/2597cb7e564b9004c9d3182afb29b37ae842411a?narHash=sha256-KOb/xJgNRoUDD7y42/lh2a1%2BakUQ7OYuBdwX/CZevFY%3D»/lib/modules.nix:361:18:
+          360|         options = checked options;
+          361|         config = checked (removeAttrs config [ "_module" ]);
+             |                  ^
+          362|         _module = checked (config._module);
+
+       … while evaluating a branch condition
+         at «github:nvmd/nixpkgs/2597cb7e564b9004c9d3182afb29b37ae842411a?narHash=sha256-KOb/xJgNRoUDD7y42/lh2a1%2BakUQ7OYuBdwX/CZevFY%3D»/lib/modules.nix:297:9:
+          296|       checkUnmatched =
+          297|         if config._module.check && config._module.freeformType == null && merged.unmatchedDefns != [ ] then
+             |         ^
+          298|           let
+
+       (stack trace truncated; use '--show-trace' to show the full, detailed trace)
+
+       error: undefined variable 'sops-nix'
+       at /home/gwelican/nix3/hosts/rpi-kiosk.nix:5:5:
+            4|   imports = [
+            5|     sops-nix.nixosModules.sops
+             |     ^
+            6|   ];
+warning: Git tree '/home/gwelican/nix3' is dirty
+warning: ignoring untrusted substituter 'https://nixos-raspberrypi.cachix.org', you are not a trusted user.
+Run `man nix.conf` for more information on the `substituters` configuration option.
+warning: ignoring the client-specified setting 'trusted-public-keys', because it is a restricted setting and you are not a trusted user
+warning: ignoring untrusted substituter 'https://nixos-raspberrypi.cachix.org', you are not a trusted user.
+Run `man nix.conf` for more information on the `substituters` configuration option.
+warning: ignoring the client-specified setting 'trusted-public-keys', because it is a restricted setting and you are not a trusted user
+warning: updating lock file "/home/gwelican/nix3/flake.lock":
+• Added input 'comin':
+    'github:nlewo/comin/d5bbf20a7e3afe492ab5b05e0250635f4e51da44?narHash=sha256-F59AGLXs/kLBYK8kfvev5OPoLmpb6G9XF/1vk27Gzu4%3D' (2026-02-25)
+• Added input 'comin/flake-compat':
+    'github:NixOS/flake-compat/65f23138d8d09a92e30f1e5c87611b23ef451bf3?narHash=sha256-4VBOP18BFeiPkyhy9o4ssBNQEvfvv1kXkasAYd0%2BrrA%3D' (2025-12-07)
+• Added input 'comin/nixpkgs':
+    'github:NixOS/nixpkgs/6a6c0b0e45e89636dc7546bc561cc031e429d068?narHash=sha256-2n2pA3OG4jBcxUJcwLtpwBxDxr6j5tIGzh5YD2WmJQc%3D' (2026-02-23)
+• Added input 'comin/treefmt-nix':
+    'github:numtide/treefmt-nix/337a4fe074be1042a35086f15481d763b8ddc0e7?narHash=sha256-wQ6NJSuFqAEmIg2VMnLdCnUc0b7vslUohqqGGD%2BFyxk%3D' (2026-02-04)
+• Added input 'comin/treefmt-nix/nixpkgs':
+    'github:nixos/nixpkgs/4533d9293756b63904b7238acb84ac8fe4c8c2c4?narHash=sha256-tbS0Ebx2PiA1FRW8mt8oejR0qMXmziJmPaU1d4kYY9g%3D' (2026-02-03)
+• Added input 'nixos-raspberrypi':
+    'github:nvmd/nixos-raspberrypi/6b30596bea9047a7cbb55cb58e6f8a3efa4012e2?narHash=sha256-v4UIlzztrAll/NPjsi0xWa5%2BfWcI9A4p8MLonL9EUeg%3D' (2026-02-23)
+• Added input 'nixos-raspberrypi/argononed':
+    'github:nvmd/argononed/16dbee54d49b66d5654d228d1061246b440ef7cf?narHash=sha256-DPNI0Dpk5aym3Baf5UbEe5GENDrSmmXVdriRSWE%2Brgk%3D' (2024-10-22)
+• Added input 'nixos-raspberrypi/flake-compat':
+    'github:edolstra/flake-compat/5edf11c44bc78a0d334f6334cdaf7d60d732daab?narHash=sha256-vNpUSpF5Nuw8xvDLj2KCwwksIbjua2LZCqhV1LNRDns%3D' (2025-12-29)
+• Added input 'nixos-raspberrypi/nixos-images':
+    'github:nvmd/nixos-images/cbbd6db325775096680b65e2a32fb6187c09bbb4?narHash=sha256-LUOH27unNWbGTvZFitHonraNx0JF/55h30r9WxqrznM%3D' (2025-05-20)
+• Added input 'nixos-raspberrypi/nixos-images/nixos-stable':
+    follows 'nixos-raspberrypi/nixpkgs'
+• Added input 'nixos-raspberrypi/nixos-images/nixos-unstable':
+    follows 'nixos-raspberrypi/nixpkgs'
+• Added input 'nixos-raspberrypi/nixpkgs':
+    'github:nvmd/nixpkgs/2597cb7e564b9004c9d3182afb29b37ae842411a?narHash=sha256-KOb/xJgNRoUDD7y42/lh2a1%2BakUQ7OYuBdwX/CZevFY%3D' (2026-02-23)
+• Added input 'nixpkgs':
+    'github:nixos/nixpkgs/2fc6539b481e1d2569f25f8799236694180c0993?narHash=sha256-0MAd%2B0mun3K/Ns8JATeHT1sX28faLII5hVLq0L3BdZU%3D' (2026-02-23)
+• Added input 'sops-nix':
+    'github:mic92/sops-nix/334daa7c273dd8bf7a0cd370e4e16022b64e55e9?narHash=sha256-/wA0OaH6kZ/pFA%2BnXR/tvg5oupOmEDmMS5us79JT60o%3D' (2026-02-25)
+• Added input 'sops-nix/nixpkgs':
+    'github:NixOS/nixpkgs/d1c15b7d5806069da59e819999d70e1cec0760bf?narHash=sha256-b9uG8yN50DRQ6A7JdZBfzq718ryYrlmGgqkRm9OOwCE%3D' (2026-02-16)
+these 225 derivations will be built:
+  /nix/store/0bcnis0v4553yl97af87nkjg8ryvn873-sudo.pam.drv
+  /nix/store/9wkyfqa98gmsa1g8pwqiwrnrpalcl9zd-getty.drv
+  /nix/store/87c65bqldjdjdkhw2p19lykaak7jxknz-getty.drv
+  /nix/store/0jcvjzmhyr1r5jzndh5yd767hirfhrr5-unit-getty-.service.drv
+  /nix/store/c03pvc3x9ndsr35p9v6nlph8b8a1iy0y-etc-systemd-journald.conf.drv
+  /nix/store/zis4syrarb702q7jyp437f4b1nsqa31f-X-Restart-Triggers-systemd-journald.drv
+  /nix/store/0llpxhlc4kq576nga80xn19hplx998vz-unit-systemd-journald.service.drv
+  /nix/store/0q449mwga55iygjqfnmv2r5b8s9fcali-extra-hwdb-file.drv
+  /nix/store/fd6c2xrby5z527106dqbwwp4xpai9psr-builder.pl.drv
+  /nix/store/0s0l0dil6hlvij724cg2vsaj536zx0r7-console-env.drv
+  /nix/store/0s1sqpx5aa5ap6d1qwqi1sd9fjn567zn-etc-systemd-logind.conf.drv
+  /nix/store/y3nzpnf27vrlv53lbwqfhl1ai619p93k-lessconfig.drv
+  /nix/store/1bcgyj4crjmd149n9k4bkd5x8dr1x3cq-set-environment.drv
+  /nix/store/1dmzkds0wg51i88w83a1gc69yhbz3g2h-nixos-tmpfiles.d.drv
+  /nix/store/d1z7sik6jk0q78agr553iqchhckss8v4-lazy-options.json.drv
+  /nix/store/1f07vkxbyfnsav32gx4rwlnlk8gvd19x-options.json.drv
+  /nix/store/1h5kmyhnhcmc0ls4a4hhz9g95d4zq8fa-etc-bashrc.drv
+  /nix/store/1wm67m9493bq25yrapfpcch47ggrz4h5-unit-console-getty.service-disabled.drv
+  /nix/store/1x7pgh3xlfng2459vxil5kl6h82yr06v-grub-config.xml.drv
+  /nix/store/awimlfr8pj1hgfjyf32jig14hgwid72y-etc-modprobe.d-nixos.conf.drv
+  /nix/store/kxmrmhasgc3sas7dvqgvzvkxqm24fhpq-mounts.sh.drv
+  /nix/store/mv3rf2mp0zhw5y53x2c8yh2k5zd3d2s1-initrd-fsinfo.drv
+  /nix/store/spib2i2v86pp9zqz49hp3cja0ppnrr4v-stage-1-init.sh.drv
+  /nix/store/fia2rw5qg9nd5gzn5z0ip6smp9f7piyn-closure-info.drv
+  /nix/store/2d9w6ciry8pg8fdniaa8y0xi44wsbzgi-initrd-linux-6.12.74.drv
+  /nix/store/2vbsbdhlr8gy1drwlb1qc5ap0hnnxz59-perl-5.40.0-env.drv
+  /nix/store/2awj6q2y7w5c52nasx245j7acih19ihk-etc-systemd-system-preset-00-nixos.preset.drv
+  /nix/store/3xvd8ymcp3ka91bll0k3x8yzrscg4j3f-etc-resolvconf.conf.drv
+  /nix/store/5kjyzfzhbnm559flpsz7zrhz13cyzbh9-ipv6-privacy-extensions.rules.drv
+  /nix/store/79wkmdfal784ypzxcm7jazv12770bckb-extra-udev-rules.drv
+  /nix/store/ng5ckl1c7n2vnx1wly4fr2ai90b55vfz-ipv6-privacy-extensions.rules.drv
+  /nix/store/yhknpnz56xz2xqx440sm2wzky6jkmv5c-udev-path.drv
+  /nix/store/4jaag04rv6m1y5rzfwqzq9m36iqs26c5-udev-rules.drv
+  /nix/store/2g02gy01cbmpx58bmawhlvf6yg57cc2v-nixos-enter.drv
+  /nix/store/k59js6avww967x88a0dkqdyvghklsdg5-nixos-manual-html.drv
+  /nix/store/9xynrmbb6396hc2y17hasjmbvb5w8584-nixos-help.drv
+  /nix/store/hl8h0gz52gmipr4dbmnx4xaslnxjnpm4-nixos-manual.desktop.drv
+  /nix/store/2na976l4x86p4bqzkbc2zvyhss33pcri-nixos-help.drv
+  /nix/store/cp3afi1y8gikdmy5104c9iji15zjg92j-perl-5.40.0-env.drv
+  /nix/store/8aqy838dd3ra63ppyd0ksiagd4gl73pg-nixos-generate-config.drv
+  /nix/store/al1685avblzxyivzg8wg8bzqchj06pma-nixos-build-vms.drv
+  /nix/store/mr5vf865nv1d0za98pdgcx737fkap70m-nixos-configuration-reference-manpage.drv
+  /nix/store/p1qgliw4qddp7vcv4bpv883dj42xj95r-nixos-install.drv
+  /nix/store/s6hf2fj4sp5kv83pc44zn7sxwz12yhkr-nixos-version.drv
+  /nix/store/k59ffa9ildjw3qp2hjic9cdwfid74g3p-system-path.drv
+  /nix/store/4nqmv89g2h6awgwpnjj29xwl4mcwyr3s-dbus-1.drv
+  /nix/store/56gwqn2ppbdrmz4xdqlzgs0vjbvvvv4n-etc-fuse.conf.drv
+  /nix/store/5mbn5yhajmy4d1643x21hxs2khsnljbs-etc-systemd-coredump.conf.drv
+  /nix/store/5nryd611ncdp270fnzxca6371rsm525s-passwd.pam.drv
+  /nix/store/62ks9mp1lrdcj3dzp2nl5az58hkp6h50-groupdel.pam.drv
+  /nix/store/65hyn15zakzgmmq9kwskl3pi8llp1ayj-chsh.pam.drv
+  /nix/store/6a7xb8nbf2ywwzq2av384k98xca597l6-groupmod.pam.drv
+  /nix/store/6aza0m3afzjcivajpj3wmjjsymvmjjpz-locale.conf.drv
+  /nix/store/6dgv04vyb5vdh8yfxs6nq62094wx8gix-systemd-user.pam.drv
+  /nix/store/6x1jkkb2s6v567zv6da05wsvpi07gh22-etc-nanorc.drv
+  /nix/store/7kiad8gr5044v3bis9qpn0yan0y5d4xz-etc-ssh-ssh_known_hosts.drv
+  /nix/store/8jqjiwinaq51cvbciji277ddjzjy09c7-etc-profile.drv
+  /nix/store/8pgipay3ahzxhn8cxvj9gigwbarmgnnn-etc-systemd-user.conf.drv
+  /nix/store/95si65xxw0inb753yqkiz77dvs4ybaxw-etc-lvm-lvm.conf.drv
+  /nix/store/994lbnfv53k1zkgz4jf2qjcr73myyalq-tmpfiles.d.drv
+  /nix/store/99lf9vhr5sxycqg6xk309ml1gl44l4vn-nixos.conf.drv
+  /nix/store/9ap33bdchgs9r7f2gg7h9zzg3fvrwcqi-etc-systemd-user-preset-00-nixos.preset.drv
+  /nix/store/9h24crh9xln5g80qvipkhii7qb4pja9f-hwdb.bin.drv
+  /nix/store/9kqxvrisa0p40cynpfi62nd7hw603pyz-fontconfig-etc.drv
+  /nix/store/9s9cs7vhcr3gdrzjwgsml75rmabfdh77-chpasswd.pam.drv
+  /nix/store/a08xhkvm86fsdcp7iqzfp71935vyzj03-etc-hostname.drv
+  /nix/store/anqx9rdvmyw57qypsdl42gs1qzgsb17r-login.pam.drv
+  /nix/store/bnm858zgcnpamyk7j7mfq78zmyswm9is-etc-pam-environment.drv
+  /nix/store/c0s6rhw7fy4rgb27hrs78vapyg39gwad-userdel.pam.drv
+  /nix/store/6ayyfak41z2k3whay1gksmlj17fvvlya-localhost-hosts.drv
+  /nix/store/q93ydmxbr9l7qlzad0jkq7255c8flcvx-extra-hosts.drv
+  /nix/store/qcxsjdfkrz7g7y1hafp0gqbk48ycw9k5-string-hosts.drv
+  /nix/store/c59mm21i6yvqqlqqlflzq3zjjkcchb5r-hosts.drv
+  /nix/store/c7slwqp74awnysaipk3p1zisx2g62ndx-su.pam.drv
+  /nix/store/cih5l5h9b0s2wsjymz8sbqwsflh83shh-login.defs.drv
+  /nix/store/fmc0icmi5kpk8pp25ghskcrlbxgjrdvn-nix.conf.drv
+  /nix/store/h35qa71jv11ka55zlmx1km0vwvrwswy4-issue.drv
+  /nix/store/hqm1sll19zgksc4g73fxwrvkv7s8rw7k-other.pam.drv
+  /nix/store/hyapkp7vzs0i6x2za3jmpcfnarprpiy7-etc-systemd-oomd.conf.drv
+  /nix/store/2kvkqqbam9j5gfgl1aipawp5d3d45zrs-unit-systemd-tmpfiles-setup.service.drv
+  /nix/store/3vkys35zlxhd9manz1hr5g9k9rm3hlhg-X-Restart-Triggers-dbus.drv
+  /nix/store/58icfm06xyv4i94n7aszcg2amwbz0g86-unit-dbus.service.drv
+  /nix/store/gy3jplb0p8r86zyjiap4xq3nvk0m66gi-unit-systemd-tmpfiles-clean.timer.drv
+  /nix/store/lk4622ansv9bczc62vbmif4icrqph53j-unit-dbus.socket.drv
+  /nix/store/4ssai85jpqdww0qh4qpjwq991pjvpgmb-unit-script-nixos-activation-start.drv
+  /nix/store/qm1ak0v43yyd0z6kl2ncsdkbxcj5jrdd-unit-nixos-activation.service.drv
+  /nix/store/z28vjw8x5p79zwcvzzhxsrm245h14mjs-unit-nixos-fake-graphical-session.target.drv
+  /nix/store/i175alx593hd0p9mw4kl2ldknlkp9vp3-user-units.drv
+  /nix/store/8h869dphcw2lfxgszkix88yg5243k0yv-systemd.drv
+  /nix/store/j5cffx87y5h458dnanh8icssn3xmda4v-50-coredump.conf.drv
+  /nix/store/j5z9lklnhsvf288xhfppb1rm5z4i0ib0-etc-systemd-timesyncd.conf.drv
+  /nix/store/j98yp5m21a2ggz9xzzp2y4rs62vmgvcj-useradd.pam.drv
+  /nix/store/k8kv0aifc59ppx8xx8j53h853bq0rl95-etc-host.conf.drv
+  /nix/store/kab6nbl21lhr4qp74a7digd0hhwcmp2c-etc-systemd-system.conf.drv
+  /nix/store/ky9jjdvavz3fjgw63igbwzis6c5dri3f-etc-nscd.conf.drv
+  /nix/store/l002ydwvlrxhivlmq62yzs2yx6gcz3x4-etc-os-release.drv
+  /nix/store/l69ma8009jv1if6ziyja1pfpz0vgyfzl-etc-nix-registry.json.drv
+  /nix/store/9csz5hi1fibrm342a64b0hkhgd2f62y6-firmware.drv
+  /nix/store/lvbx15c8z2r000r8qzxd285a3bpj202d-etc-modprobe.d-firmware.conf.drv
+  /nix/store/n05mn0fkjg4bi09k7wjkx0a3q6lxsmiv-etc-shells.drv
+  /nix/store/n5gy7iwh74n3ajzqp8ipghgdk8j7rm8r-etc-netgroup.drv
+  /nix/store/24wqv8c8myjna7ch58r5fgbdgadai7p7-unit-systemd-importd.service.drv
+  /nix/store/2fz2nl44wxpb1c0yc1la67vm63b66fmq-unit-getty.target.drv
+  /nix/store/2a6y8iz3xw0fx22hssdgr3i7171w8n80-logrotate.conf.drv
+  /nix/store/2xp956szq649s3g7b8lyd5r1qcmswd6z-unit-logrotate.service.drv
+  /nix/store/4ifrqiq3hjjgn0afz17wqgr2w5q90aci-unit-script-linger-users-start.drv
+  /nix/store/3695zvsylmca0g5f8c008znmrmif5sfn-unit-linger-users.service.drv
+  /nix/store/4jxs78nzc88nzf0d7h1b15lyz52mhqz4-unit--.slice.drv
+  /nix/store/5g5dd993xfcridnifx34pq5davaz7xv9-unit-post-resume.target.drv
+  /nix/store/5pypm9f9y2qyfjmfh2vs2rqr2xj8q7r2-unit-systemd-makefs-.service.drv
+  /nix/store/5x2s6kfzxqh0n5g571idaw4sgac2w84d-unit-system.slice.drv
+  /nix/store/71swpx4cpb9pspss31gdfv08j770y870-unit-systemd-logind.service.drv
+  /nix/store/7vg2drff72p2kfiwml9qq3grnkbx6xz3-unit-logrotate-checkconf.service.drv
+  /nix/store/858nlvdmspsmdayi38ckmlqjd5v8ywnw-unit-serial-getty-.service.drv
+  /nix/store/89glwhvdjdspbi2fg5r75p3dfqyj1pdv-unit-nscd.service.drv
+  /nix/store/4mvyagbbi2d5fcil7xhmqir45zk5r7l9-firewall-start.drv
+  /nix/store/dx58b3df2ia7xgc1shvvaj0s17di598m-firewall-stop.drv
+  /nix/store/p7xynb8b4jc1si503mib1q58iwj5y8k2-firewall-reload.drv
+  /nix/store/8ibg076lgw5b41anzjrc4bz0l5rw6qa2-unit-firewall.service.drv
+  /nix/store/xfjpp316ax1rnkqkjf2ldhc2dh4633j5-etc-sysctl.d-60-nixos.conf.drv
+  /nix/store/vp8xwjnpsiv7cpg2s87q8vmvmxkzgys5-X-Restart-Triggers-systemd-sysctl.drv
+  /nix/store/8rzvkszn9jl60n1vdfbghbqqnyn1xhk7-unit-systemd-sysctl.service.drv
+  /nix/store/9clph9jxvhhvnhjw1zr0lkbvmidb38zi-unit-systemd-journal-flush.service.drv
+  /nix/store/58dsk39dldjwy64rfr5zi19hjhn02zmp-shutdown-ramfs-contents.json.drv
+  /nix/store/9pxdjjjlmj44k5ss2j3afa6lp2kcnphx-unit-generate-shutdown-ramfs.service.drv
+  /nix/store/9w7hpk1s9ky9gvqqywfy1d7wzbmv25fy-unit-fs.target.drv
+  /nix/store/acfx5flmax0dppj6l985vbd7cgpg0s5i-unit-fstrim.timer.drv
+  /nix/store/arf6qcpqyvkv171mkmv6l9h18y5lhy9w-unit-user-.service.drv
+  /nix/store/bfkz3xsgrw8cmybqzh8h6bpga6bgl02v-unit-remote-fs.target.drv
+  /nix/store/bkxmfpqwbbqjx5f4bsmh8jhyaiwbbla8-unit-network-local-commands.service-disabled.drv
+  /nix/store/clgqbp4sb73pvzzzixyfwc2b7hn1nbki-unit-systemd-user-sessions.service.drv
+  /nix/store/cxg1glzvifgl4wf8jgqfvlw9ngbqglqd-unit-run-initramfs.mount.drv
+  /nix/store/dzp4r6wqp3xs2vfq6ra4rm478867nbjg-unit-systemd-update-utmp.service.drv
+  /nix/store/fj5202lflq8cm50s7y3b5iz7f4q142qj-unit-nix-optimise.service.drv
+  /nix/store/h2g76qhsf4x6aajyrd1ihf9a26xh2ry8-unit-systemd-oomd.service.drv
+  /nix/store/asaw13k62g1hxipwr3pns43aqx1bz47q-X-Restart-Triggers-dhcpcd.drv
+  /nix/store/cdsrf5xia5hv88yd3g7kr79n56awkdsz-migrate-dhcpcd.drv
+  /nix/store/hrw6pfkcvjz1ch7bzc3mnmwsx7j9kg2d-dhcpcd.conf.drv
+  /nix/store/kzl0lzi8f9xsr5gv3mi792ikd9kfka8k-hostname.drv
+  /nix/store/hac342g8hfwfr6i0jsv7ly2azmba5rg2-unit-dhcpcd.service.drv
+  /nix/store/hjsah1n1513v4gvmhm579gjr186bfp1d-unit-autovt-.service.drv
+  /nix/store/fymzkmnqk6jbrksxg1jmcc6amapkr4bq-unit-script-pre-sleep-start.drv
+  /nix/store/ib1l5sr2i073yd9pvakz229xxs7y760r-unit-pre-sleep.service.drv
+  /nix/store/if32wjhdy21zag1gygda8vlhc4fchqzd-unit-lastlog2-import.service.drv
+  /nix/store/isqm3hk8ykgp8jwbr4n581bqdcl668b6-unit-systemd-fsck-.service.drv
+  /nix/store/iycgx0rqrdl3nq7xafa5v4knff5pvym3-unit-nix-daemon.socket.drv
+  /nix/store/r01clrgxq6nbaa6j9375y2bhfiinnlxq-vconsole.conf.drv
+  /nix/store/4ynwg8bi626vq17vn1iivia96a4849m4-X-Restart-Triggers-reload-systemd-vconsole-setup.drv
+  /nix/store/jlll9fmw5apikv9vi3yzx8agszkz05ig-unit-reload-systemd-vconsole-setup.service.drv
+  /nix/store/93alxjvc33z7xxvg0jckmv07my9kkz0r-unit-script-prepare-kexec-start.drv
+  /nix/store/jyjsnicfd9ipglfx1b56p597i7lrd1k3-unit-prepare-kexec.service.drv
+  /nix/store/k2abcvy9qria78xk2q99gz5bl8rkpmp4-unit-multi-user.target.drv
+  /nix/store/bd3hd27hf68ii12i7s4m04jd7pg07gwa-unit-script-suid-sgid-wrappers-start.drv
+  /nix/store/lw2rm3m5zxljwi6xs4i3c1rhya0zyvrr-unit-suid-sgid-wrappers.service.drv
+  /nix/store/lzr9grvxwwk40c2hcd53prbyh8h5dcvj-unit-systemd-udev-settle.service.drv
+  /nix/store/n4blscmf09zspn2p88wzksdqh467lg2f-unit-logrotate.timer.drv
+  /nix/store/n9d0c3n6hhg7pig9zsl4r9195k825sm5-unit-systemd-mkswap-.service.drv
+  /nix/store/nh2hphyybajpgrbyh6rs1aicb4nwn1fw-X-Restart-Triggers-systemd-udevd.drv
+  /nix/store/ng5bn0rmqf7v3sfxxmbiw62rkv7rwz3z-unit-systemd-udevd.service.drv
+  /nix/store/c3mx49q6yqrili02h1pcd6j367pz8vc2-unit-script-network-setup-start.drv
+  /nix/store/p2wd644pygwv3s5kiilbixv08l2p8ay4-unit-network-setup.service.drv
+  /nix/store/pf8w6bb1m2wji6d71xk8my7lhivv1blk-unit-dbus.service.drv
+  /nix/store/5kbca2xmrqkv6wjz27dsmx79sjygvx31-X-Restart-Triggers-resolvconf.drv
+  /nix/store/z41a04yylwbajanhzwzh72lz230yd770-unit-script-resolvconf-start.drv
+  /nix/store/pw6v7jwc4l6p2vjlj8r4qf7xc9mazvwb-unit-resolvconf.service.drv
+  /nix/store/qk3z07dqgnwx66ry3gd5lzmvji8gqhnl-unit-systemd-pstore.service.drv
+  /nix/store/5gg4sfjx0lbyshw06sjzwsw0lgkcyzqh-X-Restart-Triggers-nix-daemon.drv
+  /nix/store/rb0569zvs5pxypvv1j4db04mpvnwcr1c-unit-nix-daemon.service.drv
+  /nix/store/rsjpqz1zxxkh0gih2brx85mvh74aw9a3-unit-systemd-remount-fs.service.drv
+  /nix/store/rv0h0f16m40wkw3nvj2bir923y5qhin9-unit-systemd-nspawn-.service.drv
+  /nix/store/s6vxwh4xr9aql8w3wkggca7m305cbma5-unit-systemd-journald-audit.socket.drv
+  /nix/store/sa7363p3v2yvzs5nghws71km4sy8czzm-unit-user.slice.drv
+  /nix/store/sfz7x1jsn3dp6xws5vzc1xgp40dg9ygc-unit-run-wrappers.mount.drv
+  /nix/store/srdjdyr51sfbmlfzjv8vrlyrr8l3qi1m-X-Restart-Triggers-systemd-modules-load.drv
+  /nix/store/si5xvkvrp2jhdgm69wxi5j284k7c3lmk-unit-systemd-modules-load.service.drv
+  /nix/store/v4k729z4zh153d9icay2f6c21cw2zzsc-unit-keys.target.drv
+  /nix/store/6x35b049awscbj40y980py8npi163dbz-X-Restart-Triggers-systemd-tmpfiles-resetup.drv
+  /nix/store/vb9yfs1r38avvi7cx9ravdhmfm1bkrra-unit-systemd-tmpfiles-resetup.service.drv
+  /nix/store/vbp3kfibvdhx4srcjdaxl9hv79ws61zl-unit-sysinit-reactivation.target.drv
+  /nix/store/vmgjcl9v68g2dbzagx0j4yxv5s3l41gz-unit-systemd-timedated.service.drv
+  /nix/store/45x2hfccrcsmrxzh27h5al1mc08cjj39-X-Restart-Triggers-systemd-journald-.drv
+  /nix/store/vnis18an3vcyla4n5smvmpba8ahj711c-unit-systemd-journald-.service.drv
+  /nix/store/vwwca5naga9i9qg1p95p2qn3arx02l35-unit-kmod-static-nodes.service.drv
+  /nix/store/x49crkqga0h3dr2vmcsq7izw9ab35xhk-unit-user-runtime-dir-.service.drv
+  /nix/store/rgric95si3fk4i3ixqljnda9fgq0bma7-X-Restart-Triggers-systemd-timesyncd.drv
+  /nix/store/x6189iybxaf5q4xy093061b8r5rbhnaq-unit-systemd-timesyncd.service.drv
+  /nix/store/h545sfqdm886bdz8r58lbx29f5qgxj1n-unit-script-post-resume-start.drv
+  /nix/store/x8s9pf08jac6jimrfl46x89c7q3q1hby-unit-post-resume.service.drv
+  /nix/store/xaf0rl9hrn1yfj22x9hvmvpa54l8v7xi-unit-systemd-backlight-.service.drv
+  /nix/store/617zk46njxdivg27rww2fzjdkrmmblf4-unit-script-nix-gc-start.drv
+  /nix/store/xfjgy3mp06vm6k7yfqhdq3y78s9p0px1-unit-nix-gc.service.drv
+  /nix/store/xpx5xb6vqv0j0fm331rdvdfjmpj6yzih-unit-save-hwclock.service.drv
+  /nix/store/xzqfpnicjv99dk781cw524ln57i6wsa9-unit-local-fs.target.drv
+  /nix/store/z9q299a8fvwdvnddgapfm75l1rvyy8zl-unit-systemd-random-seed.service.drv
+  /nix/store/zb8v4jg9qph8yv01rgaywxn3z0bjkf27-unit-container-getty-.service.drv
+  /nix/store/n98b59iywcgmma8vk5p8y0qljcbl5622-system-units.drv
+  /nix/store/nbqb7pr4cr05y53sv96g17j8098fha70-runuser.pam.drv
+  /nix/store/nwj7cihc89bw217jawfn2761spi5kpvq-etc-systemd-sleep.conf.drv
+  /nix/store/pdymyv0a9vawddy19m2d8gj2ivp3k9a6-useradd.drv
+  /nix/store/q0isfm2333hdyzp7cm0q9bxm8n8k7zdw-runuser-l.pam.drv
+  /nix/store/q7cqxmiffryxiv9109ck6pc6hmhpvlcg-etc-nsswitch.conf.drv
+  /nix/store/qv7rfbv3vr113jzpdir8byzwgpldl6nl-usermod.pam.drv
+  /nix/store/rcfpzrgamxk3w143lxknawrmd8cl8b23-etc-fstab.drv
+  /nix/store/rgiagg94d7z6pp5ca6gv3iqxwqqyv5hi-groupadd.pam.drv
+  /nix/store/rzg1dsryn1028q8xwz38c6amipg60w94-groupmems.pam.drv
+  /nix/store/s594yrd04mg2if9jz4602grqgnsyqxv2-vlock.pam.drv
+  /nix/store/scvs5ylg2xkw9dz21l4wz17gf2bac351-etc-bash_logout.drv
+  /nix/store/vbz158k3fgkf8xpcgy64mi50z6z787xh-etc-gai.conf.drv
+  /nix/store/w31n8yplcpwb9dl72w3h3syvkrvk2jgr-chfn.pam.drv
+  /nix/store/wbnb6y2km4rix932i708cxy473x35yzb-etc-man_db.conf.drv
+  /nix/store/y102smyjjai8d3xya1299c7i9xmmhvg0-etc-dhcpcd.exit-hook.drv
+  /nix/store/zaxp05iyd6c7yf7ib5icfmzyqjinigcy-etc-ssh-ssh_config.drv
+  /nix/store/zqvy1jh6l0vj2sid9jzacbxnhvad7jda-etc-lsb-release.drv
+  /nix/store/530dvkh80fyy14aba9vw5skq5c9li84b-etc.drv
+  /nix/store/82j5fjqj1rk11hdyqy36a59k0a8akfln-perl-5.40.0-env.drv
+  /nix/store/k1y19vcg65vbchrciv2x3rbh4miyrj3f-perl-5.40.0-env.drv
+  /nix/store/x8lsx3nd7xphwwhzr1660xzb33k32ic3-install-grub.pl.drv
+  /nix/store/9a0dysz0p7a3655i7w6420x4hizwgghz-install-grub.sh.drv
+  /nix/store/f008m7kil5r8h5x61ll6q1j8cfrv8q69-linux-6.12.74-modules.drv
+  /nix/store/ff1lqfj3flj5mb0m3mh3f748vdk41pmc-perl-5.40.0-env.drv
+  /nix/store/jkd901dkw356d5hac9qascszqjvw4d95-boot.json.drv
+  /nix/store/2jfrx924frbndz1fpbb2fa9nvk0ircrd-local-cmds.drv
+  /nix/store/md3y11wxwdr8c5j34xkqsqaqzv4kdfxq-stage-2-init.sh.drv
+  /nix/store/ssq21qfjnzal2yg1glc10iyvac7ma9gf-users-groups.json.drv
+  /nix/store/20hcrk3zss5589rkas24p3wggc3hc7c9-nixos-system-rpi-kiosk-25.11.20260223.2597cb7.drv
+these 10 paths will be fetched (1.3 MiB download, 5.2 MiB unpacked):
+  /nix/store/nbc5jswix6hrx5syvs5z45vjrj4hn124-nixos-render-docs-0.0
+  /nix/store/sxxz7rjnxh9fkis7dp7fjs99zj0ii4m5-python3.13-markdown-it-py-3.0.0
+  /nix/store/1vmawa1154pgp1blnr3yzv1xqwva1a1m-python3.13-mdit-py-plugins-0.4.2
+  /nix/store/ndhqmssp511ff86rfri5p3xdyn3l1r83-python3.13-mdurl-0.1.2
+  /nix/store/hsbgqr2dxar06iii68syk4fwhl7cws5f-security-wrapper-dbus-daemon-launch-helper-aarch64-unknown-linux-musl
+  /nix/store/s88q26rcahm8w6crzx7m09x01vgqc6g4-security-wrapper-fusermount-aarch64-unknown-linux-musl
+  /nix/store/4bljp0q27lnwnfx4aj92kyjwf736nv0g-security-wrapper-fusermount3-aarch64-unknown-linux-musl
+  /nix/store/r36l06mfjy8hf34p0q8vyrynybygqdjg-security-wrapper-mount-aarch64-unknown-linux-musl
+  /nix/store/g8xrvppx18b6kbzvakxj84bzsmqlw8k4-security-wrapper-umount-aarch64-unknown-linux-musl
+  /nix/store/wajg3l8k6y9qkf3vk2pmpyixmdqllhia-w3m-0.5.5
+error: Cannot build '/nix/store/kxmrmhasgc3sas7dvqgvzvkxqm24fhpq-mounts.sh.drv'.
+       Reason: required system or feature not available
+       Required system: 'aarch64-linux' with features {}
+       Current system: 'x86_64-linux' with features {benchmark, big-parallel, kvm, nixos-test, uid-range}
+error: Cannot build '/nix/store/20hcrk3zss5589rkas24p3wggc3hc7c9-nixos-system-rpi-kiosk-25.11.20260223.2597cb7.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/dlynpb2lcsnv3k02jgz1f36117mqknhn-nixos-system-rpi-kiosk-25.11.20260223.2597cb7
+error: Cannot build '/nix/store/spib2i2v86pp9zqz49hp3cja0ppnrr4v-stage-1-init.sh.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/0w6fa3zip6xra8z4r9dgab1r1d94avqg-stage-1-init.sh
+error: Cannot build '/nix/store/md3y11wxwdr8c5j34xkqsqaqzv4kdfxq-stage-2-init.sh.drv'.
+       Reason: 1 dependency failed.
+       Output paths:
+         /nix/store/57i8hcncs0a2zwdafzy241fxmkg1mi06-stage-2-init.sh
+error: Build failed due to failed dependency
+warning: Git tree '/home/gwelican/nix3' is dirty
+warning: ignoring untrusted substituter 'https://nixos-raspberrypi.cachix.org', you are not a trusted user.
+Run `man nix.conf` for more information on the `substituters` configuration option.
+warning: ignoring the client-specified setting 'trusted-public-keys', because it is a restricted setting and you are not a trusted user
+warning: updating lock file "/home/gwelican/nix3/flake.lock":
+• Added input 'comin':
+    'github:nlewo/comin/d5bbf20a7e3afe492ab5b05e0250635f4e51da44?narHash=sha256-F59AGLXs/kLBYK8kfvev5OPoLmpb6G9XF/1vk27Gzu4%3D' (2026-02-25)
+• Added input 'comin/flake-compat':
+    'github:NixOS/flake-compat/65f23138d8d09a92e30f1e5c87611b23ef451bf3?narHash=sha256-4VBOP18BFeiPkyhy9o4ssBNQEvfvv1kXkasAYd0%2BrrA%3D' (2025-12-07)
+• Added input 'comin/nixpkgs':
+    'github:NixOS/nixpkgs/6a6c0b0e45e89636dc7546bc561cc031e429d068?narHash=sha256-2n2pA3OG4jBcxUJcwLtpwBxDxr6j5tIGzh5YD2WmJQc%3D' (2026-02-23)
+• Added input 'comin/treefmt-nix':
+    'github:numtide/treefmt-nix/337a4fe074be1042a35086f15481d763b8ddc0e7?narHash=sha256-wQ6NJSuFqAEmIg2VMnLdCnUc0b7vslUohqqGGD%2BFyxk%3D' (2026-02-04)
+• Added input 'comin/treefmt-nix/nixpkgs':
+    'github:nixos/nixpkgs/4533d9293756b63904b7238acb84ac8fe4c8c2c4?narHash=sha256-tbS0Ebx2PiA1FRW8mt8oejR0qMXmziJmPaU1d4kYY9g%3D' (2026-02-03)
+• Added input 'nixos-raspberrypi':
+    'github:nvmd/nixos-raspberrypi/6b30596bea9047a7cbb55cb58e6f8a3efa4012e2?narHash=sha256-v4UIlzztrAll/NPjsi0xWa5%2BfWcI9A4p8MLonL9EUeg%3D' (2026-02-23)
+• Added input 'nixos-raspberrypi/argononed':
+    'github:nvmd/argononed/16dbee54d49b66d5654d228d1061246b440ef7cf?narHash=sha256-DPNI0Dpk5aym3Baf5UbEe5GENDrSmmXVdriRSWE%2Brgk%3D' (2024-10-22)
+• Added input 'nixos-raspberrypi/flake-compat':
+    'github:edolstra/flake-compat/5edf11c44bc78a0d334f6334cdaf7d60d732daab?narHash=sha256-vNpUSpF5Nuw8xvDLj2KCwwksIbjua2LZCqhV1LNRDns%3D' (2025-12-29)
+• Added input 'nixos-raspberrypi/nixos-images':
+    'github:nvmd/nixos-images/cbbd6db325775096680b65e2a32fb6187c09bbb4?narHash=sha256-LUOH27unNWbGTvZFitHonraNx0JF/55h30r9WxqrznM%3D' (2025-05-20)
+• Added input 'nixos-raspberrypi/nixos-images/nixos-stable':
+    follows 'nixos-raspberrypi/nixpkgs'
+• Added input 'nixos-raspberrypi/nixos-images/nixos-unstable':
+    follows 'nixos-raspberrypi/nixpkgs'
+• Added input 'nixos-raspberrypi/nixpkgs':
+    'github:nvmd/nixpkgs/2597cb7e564b9004c9d3182afb29b37ae842411a?narHash=sha256-KOb/xJgNRoUDD7y42/lh2a1%2BakUQ7OYuBdwX/CZevFY%3D' (2026-02-23)
+• Added input 'nixpkgs':
+    'github:nixos/nixpkgs/2fc6539b481e1d2569f25f8799236694180c0993?narHash=sha256-0MAd%2B0mun3K/Ns8JATeHT1sX28faLII5hVLq0L3BdZU%3D' (2026-02-23)
+• Added input 'sops-nix':
+    'github:mic92/sops-nix/334daa7c273dd8bf7a0cd370e4e16022b64e55e9?narHash=sha256-/wA0OaH6kZ/pFA%2BnXR/tvg5oupOmEDmMS5us79JT60o%3D' (2026-02-25)
+• Added input 'sops-nix/nixpkgs':
+    'github:NixOS/nixpkgs/d1c15b7d5806069da59e819999d70e1cec0760bf?narHash=sha256-b9uG8yN50DRQ6A7JdZBfzq718ryYrlmGgqkRm9OOwCE%3D' (2026-02-16)
+evaluating ''...
+[1mgit+file:///home/gwelican/nix3[0m
+evaluating 'nixConfig'...
+[32;1m├───[0m[1mnixConfig[0m: [35;1munknown[0m
+evaluating 'nixosConfigurations'...
+[32;1m└───[0m[1mnixosConfigurations[0m
+evaluating 'nixosConfigurations.rpi-kiosk'...
+[32;1m    └───[0m[1mrpi-kiosk[0m: [35;1mNixOS configuration[0m

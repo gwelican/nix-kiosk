@@ -1,0 +1,2 @@
+=== Age Key Generation ===
+Public key: age1xkmwtyqgtpsusgtcjcu2atjl8c0qvq0wtfctnq5erpwahpleeawq4e76h8
