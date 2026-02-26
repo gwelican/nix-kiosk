@@ -12,6 +12,7 @@
     devices = [ "/dev/mmcblk0" ];
   };
   system.stateVersion = "24.11";
+  comin.systemd.enable = true;
 }
 
   services.openssh.enable = true;
