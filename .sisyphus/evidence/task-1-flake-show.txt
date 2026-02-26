@@ -1,0 +1,4 @@
+[1mgit+file:///home/gwelican/nix3[0m
+[32;1m├───[0m[1mnixConfig[0m: [35;1munknown[0m
+[32;1m└───[0m[1mnixosConfigurations[0m
+[32;1m    └───[0m[1mrpi-kiosk[0m: [35;1mNixOS configuration[0m

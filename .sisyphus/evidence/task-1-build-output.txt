@@ -1,0 +1,75 @@
+warning: Git tree '/home/gwelican/nix3' is dirty
+warning: ignoring untrusted substituter 'https://nixos-raspberrypi.cachix.org', you are not a trusted user.
+Run `man nix.conf` for more information on the `substituters` configuration option.
+warning: ignoring the client-specified setting 'trusted-public-keys', because it is a restricted setting and you are not a trusted user
+warning: ignoring untrusted substituter 'https://nixos-raspberrypi.cachix.org', you are not a trusted user.
+Run `man nix.conf` for more information on the `substituters` configuration option.
+warning: ignoring the client-specified setting 'trusted-public-keys', because it is a restricted setting and you are not a trusted user
+warning: updating lock file "/home/gwelican/nix3/flake.lock":
+• Added input 'agenix':
+    'github:ryantm/agenix/b027ee29d959fda4b60b57566d64c98a202e0feb?narHash=sha256-9VnK6Oqai65puVJ4WYtCTvlJeXxMzAp/69HhQuTdl/I%3D' (2026-02-04)
+• Added input 'agenix/darwin':
+    'github:lnl7/nix-darwin/43975d782b418ebf4969e9ccba82466728c2851b?narHash=sha256-dyN%2BteG9G82G%2Bm%2BPX/aSAagkC%2BvUv0SgUw3XkPhQodQ%3D' (2025-04-12)
+• Added input 'agenix/darwin/nixpkgs':
+    follows 'agenix/nixpkgs'
+• Added input 'agenix/home-manager':
+    'github:nix-community/home-manager/abfad3d2958c9e6300a883bd443512c55dfeb1be?narHash=sha256-YZCh2o9Ua1n9uCvrvi5pRxtuVNml8X2a03qIFfRKpFs%3D' (2025-04-24)
+• Added input 'agenix/home-manager/nixpkgs':
+    follows 'agenix/nixpkgs'
+• Added input 'agenix/nixpkgs':
+    'github:NixOS/nixpkgs/59e69648d345d6e8fef86158c555730fa12af9de?narHash=sha256-IiiXB3BDTi6UqzAZcf2S797hWEPCRZOwyNThJIYhUfk%3D' (2025-08-01)
+• Added input 'agenix/systems':
+    'github:nix-systems/default/da67096a3b9bf56a91d16901293e51ba5b49a27e?narHash=sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768%3D' (2023-04-09)
+• Added input 'comin':
+    'github:nlewo/comin/d5bbf20a7e3afe492ab5b05e0250635f4e51da44?narHash=sha256-F59AGLXs/kLBYK8kfvev5OPoLmpb6G9XF/1vk27Gzu4%3D' (2026-02-25)
+• Added input 'comin/flake-compat':
+    'github:NixOS/flake-compat/65f23138d8d09a92e30f1e5c87611b23ef451bf3?narHash=sha256-4VBOP18BFeiPkyhy9o4ssBNQEvfvv1kXkasAYd0%2BrrA%3D' (2025-12-07)
+• Added input 'comin/nixpkgs':
+    'github:NixOS/nixpkgs/6a6c0b0e45e89636dc7546bc561cc031e429d068?narHash=sha256-2n2pA3OG4jBcxUJcwLtpwBxDxr6j5tIGzh5YD2WmJQc%3D' (2026-02-23)
+• Added input 'comin/treefmt-nix':
+    'github:numtide/treefmt-nix/337a4fe074be1042a35086f15481d763b8ddc0e7?narHash=sha256-wQ6NJSuFqAEmIg2VMnLdCnUc0b7vslUohqqGGD%2BFyxk%3D' (2026-02-04)
+• Added input 'comin/treefmt-nix/nixpkgs':
+    'github:nixos/nixpkgs/4533d9293756b63904b7238acb84ac8fe4c8c2c4?narHash=sha256-tbS0Ebx2PiA1FRW8mt8oejR0qMXmziJmPaU1d4kYY9g%3D' (2026-02-03)
+• Added input 'nixos-raspberrypi':
+    'github:nvmd/nixos-raspberrypi/6b30596bea9047a7cbb55cb58e6f8a3efa4012e2?narHash=sha256-v4UIlzztrAll/NPjsi0xWa5%2BfWcI9A4p8MLonL9EUeg%3D' (2026-02-23)
+• Added input 'nixos-raspberrypi/argononed':
+    'github:nvmd/argononed/16dbee54d49b66d5654d228d1061246b440ef7cf?narHash=sha256-DPNI0Dpk5aym3Baf5UbEe5GENDrSmmXVdriRSWE%2Brgk%3D' (2024-10-22)
+• Added input 'nixos-raspberrypi/flake-compat':
+    'github:edolstra/flake-compat/5edf11c44bc78a0d334f6334cdaf7d60d732daab?narHash=sha256-vNpUSpF5Nuw8xvDLj2KCwwksIbjua2LZCqhV1LNRDns%3D' (2025-12-29)
+• Added input 'nixos-raspberrypi/nixos-images':
+    'github:nvmd/nixos-images/cbbd6db325775096680b65e2a32fb6187c09bbb4?narHash=sha256-LUOH27unNWbGTvZFitHonraNx0JF/55h30r9WxqrznM%3D' (2025-05-20)
+• Added input 'nixos-raspberrypi/nixos-images/nixos-stable':
+    follows 'nixos-raspberrypi/nixpkgs'
+• Added input 'nixos-raspberrypi/nixos-images/nixos-unstable':
+    follows 'nixos-raspberrypi/nixpkgs'
+• Added input 'nixos-raspberrypi/nixpkgs':
+    'github:nvmd/nixpkgs/2597cb7e564b9004c9d3182afb29b37ae842411a?narHash=sha256-KOb/xJgNRoUDD7y42/lh2a1%2BakUQ7OYuBdwX/CZevFY%3D' (2026-02-23)
+• Added input 'nixpkgs':
+    'github:nixos/nixpkgs/2fc6539b481e1d2569f25f8799236694180c0993?narHash=sha256-0MAd%2B0mun3K/Ns8JATeHT1sX28faLII5hVLq0L3BdZU%3D' (2026-02-23)
+• Added input 'sops-nix':
+    'github:mic92/sops-nix/334daa7c273dd8bf7a0cd370e4e16022b64e55e9?narHash=sha256-/wA0OaH6kZ/pFA%2BnXR/tvg5oupOmEDmMS5us79JT60o%3D' (2026-02-25)
+• Added input 'sops-nix/nixpkgs':
+    'github:NixOS/nixpkgs/d1c15b7d5806069da59e819999d70e1cec0760bf?narHash=sha256-b9uG8yN50DRQ6A7JdZBfzq718ryYrlmGgqkRm9OOwCE%3D' (2026-02-16)
+error:
+       … while calling the 'seq' builtin
+         at «github:nvmd/nixpkgs/2597cb7e564b9004c9d3182afb29b37ae842411a?narHash=sha256-KOb/xJgNRoUDD7y42/lh2a1%2BakUQ7OYuBdwX/CZevFY%3D»/lib/modules.nix:361:18:
+          360|         options = checked options;
+          361|         config = checked (removeAttrs config [ "_module" ]);
+             |                  ^
+          362|         _module = checked (config._module);
+
+       … while calling the 'throw' builtin
+         at «github:nvmd/nixpkgs/2597cb7e564b9004c9d3182afb29b37ae842411a?narHash=sha256-KOb/xJgNRoUDD7y42/lh2a1%2BakUQ7OYuBdwX/CZevFY%3D»/lib/modules.nix:333:13:
+          332|           else
+          333|             throw baseMsg
+             |             ^
+          334|         else
+
+       error: The option `hardware.raspberry-pi' does not exist. Definition values:
+       - In `/nix/store/34r6krygvwvxll74244xxhbxq91f9gr9-source/flake.nix':
+           {
+             "5" = {
+               base = true;
+               display-vc4 = true;
+               page-size-16k = true;
+           ...

@@ -1,0 +1,34 @@
+# Nix
+.nix-store
+*.o
+*.log
+*.tar.gz
+*.tar.xz
+*.tgz
+
+# Nix flake.lock
+flake.lock
+
+# SOPS
+*.age
+*.sops.*
+.sops.yaml
+
+# Build artifacts
+result
+result-*
+dist-*
+bin-*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+
+# Secrets (encrypted)
+secrets/*.age.pub

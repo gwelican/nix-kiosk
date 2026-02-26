@@ -1,0 +1,8 @@
+-rw-rw-r--  1 gwelican gwelican   256 Feb 25 19:18 .gitignore
+drwxrwxr-x  2 gwelican gwelican  4096 Feb 25 19:18 deploy
+-rw-r--r--  1 gwelican gwelican  8972 Feb 25 19:21 flake.lock
+-rw-rw-r--  1 gwelican gwelican  1942 Feb 25 19:21 flake.nix
+drwxrwxr-x  2 gwelican gwelican  4096 Feb 25 19:18 hosts
+drwxrwxr-x  2 gwelican gwelican  4096 Feb 25 19:18 pkgs
+drwxrwxr-x  2 gwelican gwelican  4096 Feb 25 19:18 prometheus
+drwxrwxr-x  2 gwelican gwelican  4096 Feb 25 19:18 secrets
