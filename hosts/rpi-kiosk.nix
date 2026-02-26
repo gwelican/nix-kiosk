@@ -13,3 +13,9 @@
   };
   system.stateVersion = "24.11";
 }
+
+  services.openssh.enable = true;
+  services.openssh.settings = {
+    PermitRootLogin = "prohibit-password";
+    PasswordAuthentication = false;
+  };
