@@ -1,0 +1,41 @@
+# Left Hook configuration for NixOS RPi5 Kiosk System
+# Pre-commit and pre-push hooks for syntax, formatting, and credential detection
+
+skip_output:
+  - summary
+  - execution_summary
+
+pre-commit:
+  parallel: true
+  exclude:
+    - secrets/*.age
+    - MIGRATION.md
+    - pkgs/
+  commands:
+    credential-check:
+      glob: "*.{nix,yaml,yml}"
+      run: |
+        git diff --cached --name-only | xargs grep -E "(AGE-SECRET-KEY-1[AC-HJ-NP-Z0-9]{59}|ghp_[a-zA-Z0-9]{36}|gho_[a-zA-Z0-9]{36}|ghu_[a-zA-Z0-9]{36}|ghs_[a-zA-Z0-9]{36}|ghr_[a-zA-Z0-9]{36}|AKIA[0-9A-Z]{16}|(ssid|psk):\\s*[\"'][^\"']+[\"'])" && exit 1 || exit 0
+
+    nixfmt:
+      glob: "*.nix"
+      run: nixfmt-rfc-style {staged_files}
+
+    deadnix:
+      glob: "*.nix"
+      run: deadnix check {staged_files}
+
+    trailing-whitespace:
+      glob: "*.{nix,yaml,yml,md}"
+      run: pre-commit run trailing-whitespace --files {staged_files}
+
+    end-of-file:
+      glob: "*.{nix,yaml,yml,md}"
+      run: pre-commit run end-of-file-fixer --files {staged_files}
+
+pre-push:
+  exclude:
+    - secrets/*.age
+  commands:
+    full-validate:
+      run: task validate

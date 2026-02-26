@@ -8,14 +8,20 @@
   sops.age.keyFile = ./secrets/age.key;
   networking.hostName = "rpi-kiosk";
   services.dbus.enable = true;
+  boot.initrd.availableKernelModules = [
+    "xhci_pci"
+    "usbhid"
+  ];
+  boot.initrd.kernelModules = [ ];
   fileSystems."/" = {
-    device = "/dev/mmcblk0p2";
+    device = "/dev/disk/by-uuid/44444444-4444-4444-8888-888888888888";
     fsType = "ext4";
   };
+  swapDevices = [ ];
 
   boot.loader.grub.enable = false;
 
-  system.stateVersion = "24.11";
+  system.stateVersion = "26.05";
   services.xserver.enable = true;
   programs.sway.enable = true;
 
@@ -65,78 +71,4 @@
       MemoryHigh = "1.5G";
     };
   };
-  systemd.services.ha-health-exporter = {
-    enable = true;
-    wantedBy = [ "multi-user.target" ];
-    requires = [ "homeassistant.service" ];
-    after = [ "homeassistant.service" ];
-    serviceConfig = {
-      ExecStart = "${ha-health-exporter}/bin/ha-health-exporter";
-      Restart = "always";
-      RestartSec = "5";
-    };
-  };
-  services.prometheus = {
-    enable = true;
-    port = 9090;
-    retentionTime = "15d";
-    exporters = {
-      node.enable = true;
-    };
-    scrapeConfigs = [
-      {
-        job_name = "node_exporter";
-        static_configs = [
-          {
-            targets = [ "localhost:9100" ];
-          }
-        ];
-      }
-      {
-        job_name = "firefox_metrics";
-        static_configs = [
-          {
-            targets = [ "localhost:9101" ];
-          }
-        ];
-      }
-      {
-        job_name = "ha_health_exporter";
-        static_configs = [
-          {
-            targets = [ "localhost:9102" ];
-          }
-        ];
-      }
-    ];
-    ruleFiles = [ ../prometheus/rules/alerts.yml ];
-  };
-  services.grafana = {
-    enable = true;
-    port = 3000;
-    settings = {
-      server = {
-        root_url = "%(protocol)s://%(domain)s:%(http_port)s/";
-        serve_from_sub_path = true;
-      };
-    };
-  };
-
-  # Copy Grafana dashboards to the data directory
-  environment.etc = {
-    "grafana/dashboards/system-metrics.json".source = ../grafana/dashboards/system-metrics.json;
-    "grafana/dashboards/firefox-health.json".source = ../grafana/dashboards/firefox-health.json;
-    "grafana/dashboards/ha-connectivity.json".source = ../grafana/dashboards/ha-connectivity.json;
-  };
-
-  # GitOps configuration sync via comin
-  imports = [
-    ../comin/comin.nix
-  ];
-
-  services.comin.enable = true;
-  services.comin.repository = "git@github.com:user/rpi-kiosk-config.git";
-  services.comin.branch = "main";
-  services.comin.pollingInterval = "60s";
 }
-

@@ -5,6 +5,10 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-raspberrypi.url = "github:nvmd/nixos-raspberrypi/main";
     sops-nix.url = "github:mic92/sops-nix";
+    comin = {
+      url = "github:nlewo/comin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -13,36 +17,36 @@
       nixpkgs,
       sops-nix,
       nixos-raspberrypi,
+      comin,
       ...
     }@inputs:
     let
-      system = "aarch64-linux";
-      pkgs = nixpkgs.legacyPackages.${system}.extend (
-        final: prev: {
-          comin = final.callPackage ./pkgs/comin { };
-        }
-      );
-      ha-health-exporter = pkgs.callPackage ./pkgs/ha-health-exporter {};
-      comin = pkgs.comin;
     in
     {
-      packages.${system} = {
-        ha-health-exporter = pkgs.callPackage ./pkgs/ha-health-exporter {};
-        comin = pkgs.comin;
-        inherit (pkgs) firefox-esr;
-      };
 
       nixosConfigurations.rpi-kiosk = nixos-raspberrypi.lib.nixosSystem {
-        system = system;
+        system = "aarch64-linux";
         modules = [
           ./hosts/rpi-kiosk.nix
           sops-nix.nixosModules.sops
           nixos-raspberrypi.nixosModules.raspberry-pi-5.base
           nixos-raspberrypi.nixosModules.raspberry-pi-5.page-size-16k
           nixos-raspberrypi.nixosModules.raspberry-pi-5.display-vc4
-          ./comin/comin.nix
+          comin.nixosModules.comin
+          ({
+            services.comin = {
+              enable = true;
+              remotes = [
+                {
+                  name = "origin";
+                  url = "https://github.com/gwelican/nix-kiosk.git";
+                  branches.main.name = "master";
+                }
+              ];
+            };
+          })
         ];
-        specialArgs = { inherit nixos-raspberrypi ha-health-exporter comin; };
+        specialArgs = { inherit nixos-raspberrypi comin; };
       };
 
       nixConfig = {
