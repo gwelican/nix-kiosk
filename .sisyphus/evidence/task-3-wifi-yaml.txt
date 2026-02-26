@@ -1,0 +1,7 @@
+=== secrets/wifi.yaml (before encryption) ===
+# WiFi credentials - replace with actual values before deployment
+# These will be decrypted by sops-nix at boot time
+
+networking.wifi:
+  ssid: "kiosk-network"  # Replace with actual WiFi SSID
+  psk: "placeholder-password"  # Replace with actual password

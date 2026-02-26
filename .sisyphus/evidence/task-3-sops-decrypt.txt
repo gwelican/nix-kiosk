@@ -1,0 +1,8 @@
+=== sops decrypt output ===
+# WiFi credentials - replace with actual values before deployment
+# These will be decrypted by sops-nix at boot time
+networking.wifi:
+    # Replace with actual WiFi SSID
+    ssid: kiosk-network
+    # Replace with actual password
+    psk: placeholder-password
