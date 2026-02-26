@@ -2,7 +2,11 @@
 { config, pkgs, ... }: {
   sops.age.keyFile = ./secrets/age.key;
   networking.hostName = "rpi-kiosk";
-
+  services.dbus.enable = true;
+  hardware.raspberry-pi."5".base = true;
+  hardware.raspberry-pi."5".page-size-16k = true;
+  hardware.raspberry-pi."5".display-vc4 = true;
+  hardware.raspberry-pi."5".boot.loader = true;
   fileSystems."/" = {
     device = "/dev/mmcblk0p2";
     fsType = "ext4";
