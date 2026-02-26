@@ -22,6 +22,8 @@
         modules = [
           ./hosts/rpi-kiosk.nix
           sops-nix.nixosModules.sops
+          nixos-raspberrypi.nixosModules.default
+          nixos-raspberrypi.nixosModules.default
         ];
         specialArgs = { inherit nixos-raspberrypi; };
       };

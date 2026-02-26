@@ -243,6 +243,25 @@ Max Concurrent: 7 (Waves 1 & 2)
 
 - [x] 1. Project scaffolding + flake.nix
 
+- [x] 2. Age encryption setup + sops-nix
+- [x] 3. WiFi credentials encrypted
+- [x] 4. SSH key-based authentication
+- [x] 5. comin GitOps module integration
+- [x] 6. Prometheus + Grafana setup
+- [x] 7. SD card image build config
+- [x] 8. RPi5 base configuration
+- [x] 9. Wayland + Sway compositor
+- [x] 10. Display rotation config
+- [x] 11. USB touchscreen setup
+- [x] 12. Network configuration (DHCP)
+- [x] 13. Auto-boot on power
+- [x] 14. Firefox ESR installation
+- [x] 15. Kiosk mode configuration
+- [x] 16. systemd service with watchdog
+- [x] 17. Memory leak mitigation
+- [x] 18. Display brightness control
+- [ ] 18. Display brightness control
+
   **What to do**:
   - Create project directory structure: `hosts/`, `secrets/`, `pkgs/`, `deploy/`, `prometheus/`
   - Initialize `flake.nix` with nixpkgs and nvmd/nixos-raspberrypi inputs
