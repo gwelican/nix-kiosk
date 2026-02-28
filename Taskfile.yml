@@ -1,18 +1,7 @@
 # Taskfile for NixOS RPi5 Kiosk System
 # Common tasks for building, deploying, and managing secrets
 
-version: '3'
-
-vars:
-  credential_patterns:
-    - "AGE-SECRET-KEY-1[AC-HJ-NP-Z0-9]{59}"
-    - "ghp_[a-zA-Z0-9]{36}"
-    - "gho_[a-zA-Z0-9]{36}"
-    - "ghu_[a-zA-Z0-9]{36}"
-    - "ghs_[a-zA-Z0-9]{36}"
-    - "ghr_[a-zA-Z0-9]{36}"
-    - "AKIA[0-9A-Z]{16}"
-    - "(ssid|psk):\\s*[\"'][^\"']+[\"']"
+version: "3"
 
 tasks:
   build-image:
@@ -23,16 +12,10 @@ tasks:
       image_path:
         sh: echo result/sd-image-aarch64-linux.img
 
-  build-system:
-    desc: Build system toplevel for testing
-    cmds:
-      - nix build .#nixosConfigurations.rpi-kiosk.config.system.build.toplevel
-
   encrypt-secrets:
     desc: Encrypt secrets using SOPS
     cmds:
       - sops -e secrets/wifi.yaml > secrets/wifi.age
-      - sops -e secrets/age.key > secrets/age.key.age 2>/dev/null || echo "age.key already encrypted"
 
   decrypt-secrets:
     desc: Decrypt secrets using SOPS
@@ -43,21 +26,3 @@ tasks:
     desc: Validate flake and run checks
     cmds:
       - nix flake check
-      - nix flake show
-
-  deploy:
-    desc: Deploy SD card image to device
-    vars:
-      device: "NIXOS_DEVICE"  # Replace with actual device path (e.g., /dev/sdX)
-    cmds:
-      - dd if=result/sd-image-aarch64-linux.img of={{.NIXOS_DEVICE}} bs=4M status=progress conv=fsync
-
-  provisioning:
-    desc: Run provisioning script for new device
-    cmds:
-      - ./deploy/provision.sh
-
-  help:
-    desc: Show available tasks
-    cmds:
-      - task --list
